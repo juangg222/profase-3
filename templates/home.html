@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Kapper</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .social-icons {
+            position: absolute;
+            top: 10px; /* Separación desde la parte superior */
+            left: 15px; /* Separación desde el borde izquierdo */
+            display: flex;
+            gap: 15px; /* Espaciado entre los íconos */
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 20px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(2.5); /* Ampliación al pasar el cursor */
+            color: #d92c2c; /* Color al hacer hover */
+        }
+        .service-1 {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 8px;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .service-1.seleccionada {
+            background-color: #f0f8ff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar ul li a i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://wa.me/3156814078" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        
+        <div class="menu container">
+            <a href="#" class="index">
+                <img src="{% static 'img/logoo.png.png' %}" class="menu-icono" alt="Logo de la barbería">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{% url 'home' %}"><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href="{% url 'servicios' %}"><i class="fas fa-cut"></i>Servicios</a></li>
+                    <li><a href="{% url 'agenda' %}"><i class="fas fa-calendar-alt"></i>Agenda</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Kapper</h1>
+                <p>
+                    Bienvenidos a Kapper, tu barbería de confianza en Bogotá.
+                    Contamos con los mejores barberos de la ciudad, listos para
+                    ofrecerte un servicio personalizado y de calidad. Reserva tu cita
+                    fácilmente y disfruta de una experiencia de cuidado único.
+                </p>
+            </div>
+
+            <div class="carruseles-contenedor">
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="{% static 'img/c1.jpg' %}" alt="Carrusel 1 Imagen 1">
+                        <img src="{% static 'img/c2.jpg' %}" alt="Carrusel 1 Imagen 2">
+                        <img src="{% static 'img/c3.jpg' %}" alt="Carrusel 1 Imagen 3">
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="{% static 'img/c4.png' %}" alt="Carrusel 2 Imagen 1">
+                        <img src="{% static 'img/c5.jpg' %}" alt="Carrusel 2 Imagen 2">
+                        <img src="{% static 'img/c6.jpg' %}" alt="Carrusel 2 Imagen 3">
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="{% static 'img/c7.jpg' %}" alt="Carrusel 3 Imagen 1">
+                        <img src="{% static 'img/c8.jpg' %}" alt="Carrusel 3 Imagen 2">
+                        <img src="{% static 'img/c9.png' %}" alt="Carrusel 3 Imagen 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-dir">
+                <div class="dir">
+                    <h2>CIUDAD</h2>
+                    <p>Bogotá</p>
+                </div>
+                <div class="dir">
+                    <h2>DIRECCIÓN</h2>
+                    <p>Av. Cra 19 #120-60</p>
+                </div>
+                <div class="dir">
+                    <h2>HORARIO</h2>
+                    <p>9am a 8pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="info-button-container" style="text-align: center; margin-top: 20px;">
+            <a href="{% url 'servicios' %}" class="btn-1">SERVICIOS</a>
+        </div>
+        
+    </header>
+
+
+    <footer style="background-color: #8b2e2e; color: white; padding: 20px;">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6753180297123!2d-74.06556182436806!3d4.6518708953229595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a45da189a37%3A0xbde0ac1297afa44c!2sKr%2013%20%2365-10%2C%20Chapinero%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1728502802750!5m2!1ses!2sco" 
+                width="800" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <p style="margin: 0; font-family: Arial, sans-serif;">
+                © 2024, Barbería Kapper by 365 Company<br>
+                <a href="#" style="color: white; text-decoration: none;">Política de reembolso</a> |
+                <a href="#" style="color: white; text-decoration: none;">Términos del servicio</a>
+            </p>
+        </div>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

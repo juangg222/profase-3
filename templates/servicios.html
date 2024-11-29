@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería</title>
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <style>
+        .social-icons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons a {
+            color: #000;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .service-1 {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 8px;
+            text-align: center;
+            border-radius: 8px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .service-1.seleccionada {
+            background-color: #f0f8ff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .navbar ul li a i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+
+        <div class="menu container">
+            <a href="#" class="index">
+                <img src="{% static 'img/logoo.png.png' %}" alt="Logo" class="menu-icono">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{% url 'home' %}"><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href="{% url 'servicios' %}"><i class="fas fa-cut"></i>Servicios</a></li>
+                    <li><a href="{% url 'agenda' %}"><i class="fas fa-calendar-alt"></i>Agenda</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="services-txt">
+            <h2>¡ Nuestros servicios !</h2>
+            <hr>
+        </div>
+       
+        <div class="service-group">
+            <div class="service-1" data-id="1">
+                <img src="{% static 'img/a2.jpg' %}" alt="Servicio 1">
+                <h3><i class="fas fa-user-alt"></i>Corte $25.000</h3>
+                
+            </div>
+            <div class="service-1" data-id="2">
+                <img src="{% static 'img/faciales.png' %}" alt="Servicio 2">
+                <h3><i class="fas fa-spa"></i>Facial $10.000</h3>
+                
+            </div>
+            <div class="service-1" data-id="3">
+                <img src="{% static 'img/barba.png' %}" alt="Servicio 3">
+                <h3><i class="fas fa-beard"></i>Barba $5.000</h3>
+                
+            </div>
+            <div class="service-1" data-id="4">
+                <img src="{% static 'img/b4.jpg' %}" alt="Servicio 4">
+                <h3><i class="fas fa-eye"></i>Cejas $3.000</h3>
+              
+            </div>
+        </div>
+    
+    </header>
+
+
+</html>

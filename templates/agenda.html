@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda tu cita | Barbería</title>
+    <link rel="stylesheet" href="{% static 'css/agenda.css' %}" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu container">
+        <a href="#" class="index">
+          <img
+            src="{% static 'img/logoo.png.png' %}"
+            class="menu-icono"
+            alt="Logo de la barbería"
+          />
+        </a>
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="{% url 'home' %}"><i class="fas fa-home"></i> Inicio</a>
+            </li>
+            <li>
+              <a href="{% url 'servicios' %}"><i class="fas fa-cut"></i>Servicios</a>
+            </li>
+            <li>
+              <a href="{% url 'agenda' %}"><i class="fas fa-calendar-alt"></i> Agenda</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="services-txt">
+        <h2>¡ Agenda Tu Cita !</h2>
+        <hr>
+    </div>
+      <!-- Contenedor con la imagen de fondo -->
+      <div class="background">
+        <div class="appointment-form-container">
+          <!-- Formulario-->
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Podrías personalizar la salida aquí -->
+            <button type="submit" class="submit-btn" aria-label="Enviar cita">Agendar Cita</button>
+          </form>
+        </div>
+      </div> <!-- Cambié la etiqueta </div> por </header> aquí -->
+    </header>
+  </body>
+</html>
