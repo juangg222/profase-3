@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* General */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #8b2e2e;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-image: url("/static/img/bg.jpg");
+    background-color: #2ac769;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icono {
+    width: 170px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos */
+    gap: 30px; /* Espaciado entre los enlaces */
+    list-style: none; /* Quita los puntos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    list-style: none; /* Asegura que no haya puntos */
+}
+
+.navbar ul li a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 10px 15px; /* Espaciado interno para el botón */
+    border: 2px solid transparent; /* Define un borde invisible */
+    border-radius: 10px; /* Bordes redondeados */
+    font-weight: bold; /* Resalta el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+}
+
+.navbar ul li a:hover {
+    color: #d82e37; /* Cambia el color al pasar el mouse */
+    border-color: #d82e37; /* Añade un borde visible */
+    transition: 0.3s; /* Efecto de transición suave */
+}
+/* Servicios */
+.services {
+    padding: 50px 0; /* Espaciado superior e inferior para la sección */
+    text-align: center; /* Centra todo el contenido dentro de la sección */
+}
+
+.service-group {
+    display: flex; /* Usa un diseño flexible para los elementos secundarios */
+    justify-content: center; /* Centra los servicios horizontalmente */
+    align-items: center; /* Alinea verticalmente el contenido dentro de cada tarjeta */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas si es necesario */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    margin: 0 auto; /* Centra el contenedor completo */
+    max-width: 1200px; /* Define un ancho máximo para evitar que se extiendan demasiado */
+}
+
+
+.service-group .service-1 {
+    box-shadow: 0 40px 40px rgb(88, 9, 214);
+    background-color: #ff0000;
+    color: #d82e37; /* Cambia el color al pasar el mouse */
+    background-color: #070707; /* Color de fondo oscuro para la tarjeta */
+    padding: 35px 25px; /* Espaciado interno dentro de la tarjeta */
+    border-radius: 15px; /* Bordes redondeados para un diseño más suave */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    flex-basis: 25%; /* La tarjeta ocupará el 25% del contenedor flexible */
+    max-width: 200px; /* Ancho máximo para las tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el efecto al pasar el mouse */
+}
+
+.service-group .service-1:hover {
+    transform: translateY(-10px) scale(1.05); /* Desplaza hacia arriba y amplía la tarjeta */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Aumenta la sombra para intensificar el efecto 3D */
+}
+
+.service-group .service-1 img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantén la proporción original de la imagen */
+    margin-bottom: 15px; /* Espaciado inferior entre la imagen y el texto */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de ampliación */
+}
+
+.service-group .service-1 img:hover {
+    transform: scale(1.1); /* Amplía la imagen al pasar el mouse */
+}
+
+.service-group .service-1 h3 {
+    font-size: 25px; /* Tamaño de fuente para el título */
+    color: #FFFFFF; /* Color blanco para el texto */
+    margin-bottom: 10px; /* Espaciado inferior entre el título y el botón */
+}
+
+.service-group .service-1 a {
+    display: inline-block; /* Permite configurar el botón como un bloque en línea */
+    background-color: #CF2D3A; /* Color de fondo rojo del botón */
+    color: #FFFFFF; /* Color blanco para el texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none; /* Quita el subrayado del texto */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+}
+
+.services-txt h2 {
+    font-size: 70px; /* Tamaño de fuente para el título de la sección */
+    line-height: 1.2; /* Espaciado entre las líneas del texto */
+    color: #FFFFFF; /* Color blanco para el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    margin-bottom: 20px; /* Espaciado inferior entre el título y el contenido siguiente */
+}

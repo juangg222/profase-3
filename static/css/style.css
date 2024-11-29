@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilo general del body */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #8b2e2e;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Estilo del header */
+
+.header {
+    background-image: url("/static/img/bg.jpg");
+    background-color: #2ac769;  /* Color de fondo de respaldo */
+    background-size: cover;     /* Asegura que la imagen cubra toda el área */
+    background-position: center center;  /* Centra la imagen */
+    background-attachment: fixed;  /* Fija la imagen cuando haces scroll */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px 0;  /* Ajusta el padding según lo que necesites */
+    min-height: 100vh;  /* Asegura que el header ocupe toda la pantalla */
+}
+
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icono {
+    width: 170px;
+}
+
+/* Estilo del navbar */
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #d82e37;
+    border-color: #d82e37;
+}
+
+/* Títulos y texto principal */
+.header-txt h1 {
+    font-size: 110px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", cursive;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.header-txt span {
+    font-size: 35px;
+    display: block;
+    margin-top: -10px;
+}
+
+.header-txt p {
+    color: #ffffff;
+    margin: 15px auto;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+/* Carruseles */
+.carruseles-contenedor {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.carousel {
+    box-shadow: 5px 5px 10px rgba(238, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.3); /* Margen 3D */
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #ff0000;
+    border: 1px solid #4000ff; /* Borde de color rojo */
+    padding: 0;
+    box-shadow: 0 40px 40px rgb(88, 9, 214);
+    background-color: #ff0000;
+    transition: transform 0.5s cubic-bezier(0.25, 1.5, 0.5, 1);
+    border: 20px solid #d92c2c
+    padding 10px;
+}
+.carousel:hover {
+    transform: scale(1.05); /* Efecto de aumentar ligeramente el tamaño al pasar el mouse */
+    box-shadow: 10px 10px 20px rgba(217, 21, 21, 0.4), -10px -10px 20px rgba(255, 255, 255, 0.4); /* Aumenta el efecto de sombra en hover */
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que las imágenes cubran todo el área del carrusel */
+    display: block;
+}
+
+
+/* Botón principal */
+.btn-1 {
+    display: inline-block;
+    padding: 11px 25px;
+    background-color: #5e12ec;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-family: "Bebas Neue", cursive;
+    border: 0;
+    border-radius: 5px;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.btn-1:hover {
+    background-color: #a62328;
+}
+
+/* Bloque de direcciones */
+.info-contenedor {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.header-dir {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dir h3 {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.dir p {
+    font-size: 22px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #2ac769;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
